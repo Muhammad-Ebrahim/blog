@@ -1,0 +1,11 @@
+<%= @post.title %> 
+<br>
+<p>
+    On <%= @post.created_at.strftime("%B %d %Y, %l:%M%P")%>
+</p>
+<br>
+<%= @post.description %>
+<br>
+<%= @post.content %>  
+<br>
+<%= link_to  "Edit", edit_post_path(@post) %>
