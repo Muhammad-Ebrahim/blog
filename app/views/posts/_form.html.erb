@@ -1,5 +1,6 @@
 <%= simple_form_for @post do |f| %>
     <%= f.input :title, label: "Write your Awesome title" %>
+    <%= f.input :slug, label: "Write your Awesome slug" %>
     <%= f.input :description, label: "Describe your POC with degnity" %>
     <%= f.input :content %>
     <%= f.submit :publish %>

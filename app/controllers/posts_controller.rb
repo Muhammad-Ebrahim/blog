@@ -37,11 +37,11 @@ class PostsController < ApplicationController
     private
     #Define post pramas for the controller
     def post_params
-      params.require(:post).permit(:title, :content, :description)
+      params.require(:post).permit(:title, :content, :description, :slug)
     end
 
     # a private method to help the CRUD actions find the post
     def find_post
-      @post = Post.find(params[:id])
+      @post = Post.friendly.find(params[:id])
     end
 end
