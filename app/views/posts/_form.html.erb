@@ -2,6 +2,8 @@
     <%= f.input :title, label: "Write your Awesome title" %>
     <%= f.input :slug, label: "Write your Awesome slug" %>
     <%= f.input :description, label: "Describe your POC with degnity" %>
+    <%= f.label :tag_list %>
+    <%= f.text_field :tag_list %>
     <%= f.input :content %>
     <%= f.submit :publish %>
 <% end %>

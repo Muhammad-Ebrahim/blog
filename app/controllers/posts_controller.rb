@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
     before_action :find_post, only: [:show, :edit, :update, :destroy]
     def index
+      if params[:tag]
+        @posts = Post.tagged_with(params[:tag])
+      else
         @posts = Post.all
+      end
     end
 
     def new
@@ -37,7 +41,7 @@ class PostsController < ApplicationController
     private
     #Define post pramas for the controller
     def post_params
-      params.require(:post).permit(:title, :content, :description, :slug)
+      params.require(:post).permit(:title, :content, :description, :slug, :tag_list)
     end
 
     # a private method to help the CRUD actions find the post
