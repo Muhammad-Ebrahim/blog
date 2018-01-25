@@ -4,7 +4,7 @@ class PostsController < ApplicationController
       if params[:tag]
         @posts = Post.tagged_with(params[:tag])
       else
-        @posts = Post.all
+        @posts = Post.paginate(:page => params[:page], :per_page => 7)
       end
     end
 
