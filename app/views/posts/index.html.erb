@@ -1,6 +1,9 @@
-<h1>The index h1</h1>
+<% title 'SEO & Growth Blog | Muhammad Ibrahim' %>
+<% description 'SEO & Growth experiements to help you grow your SaaS organically' %>
+
+
 <% @posts.each do |post| %>
-    <%= post.title %> 
+    <%= display_meta_tags title: post.title %> 
     <%= post.created_at.strftime("%B %d %Y, %l:%M%P")%>
     <%= link_to  "Read More", post %>
     <p>

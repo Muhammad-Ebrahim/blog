@@ -21,6 +21,11 @@ class PostsController < ApplicationController
         end
     end
 
+    def show
+      set_meta_tags title: @post.title, 
+                    description: @post.description     
+    end
+
     def edit
       
     end
