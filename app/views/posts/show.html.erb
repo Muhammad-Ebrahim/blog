@@ -8,6 +8,6 @@
 <br>
 <%= @post.description %>
 <br>
-<%= @post.content %>  
+<p><%= markdownify @post.content %></p>  
 <br>
 <%= link_to  "Edit", edit_post_path(@post) %>
