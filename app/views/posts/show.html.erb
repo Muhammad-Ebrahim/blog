@@ -1,5 +1,7 @@
 <%= @post.title %> 
 <br>
+<% breadcrumb :post, @post %>
+<br>
 <p>
     On <%= @post.created_at.strftime("%B %d %Y, %l:%M%P")%>
 </p>
