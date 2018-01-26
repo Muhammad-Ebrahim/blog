@@ -1,0 +1,8 @@
+{
+    // Your keyboard shortcuts
+
+    "key": "ctrl+shift+`",
+    "command": "erb.toggleTags",
+    "when": "editorTextFocus && editorLangId == erb"
+  
+}
