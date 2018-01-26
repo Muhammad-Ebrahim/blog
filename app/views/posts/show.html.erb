@@ -11,3 +11,4 @@
 <%= markdownify sanitize @post.content %>  
 <br>
 <%= link_to  "Edit", edit_post_path(@post) %>
+<%= render 'disqus' %>
