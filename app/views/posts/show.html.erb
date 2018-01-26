@@ -10,7 +10,10 @@
 <br>
 <%= markdownify sanitize @post.content %>  
 <br>
-
+<% if admin_signed_in?%>
+    <%= link_to  "Edit", edit_post_path(@post) %>
+<% end %>
+<%= render 'disqus' %>
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
     <form action="https://flourista.us14.list-manage.com/subscribe/post?u=3934eed7142ee69ecdbc55170&amp;id=41ab5b33bf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -41,6 +44,3 @@
     </div>
     
     <!--End mc_embed_signup-->
-
-<%= link_to  "Edit", edit_post_path(@post) %>
-<%= render 'disqus' %>

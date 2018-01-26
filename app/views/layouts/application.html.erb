@@ -8,7 +8,14 @@
   </head>
 
   <body>
+    <% if admin_signed_in?%>
+      <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
+    <% end %>
     <%= breadcrumbs separator: " &rsaquo; " %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>

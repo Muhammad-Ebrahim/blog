@@ -2,4 +2,7 @@
     <%= @service.title %>
     <br>
     <%= sanitize @service.content%>
+    <% if admin_signed_in?%>
+        <%= link_to  "Edit", edit_post_path(@post) %>
+    <% end %>
    </body>

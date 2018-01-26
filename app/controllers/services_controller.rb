@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+    before_action :authenticate_admin!, except: [:index, :show]
     before_action :find_service, only: [:edit, :update, :show, :destroy]
     def index
         @services = Service.all
