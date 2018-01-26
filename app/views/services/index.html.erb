@@ -1,0 +1,11 @@
+<h1>You should buy one of my services, Really you have to!!</h1>
+
+ <% @services.each do |service| %>
+    <%= service.title %>
+    <br>
+    <%= sanitize service.content %>
+    <br>
+    <%= link_to "READ MORE", service_path(service) %>
+    <br>
+        <%= link_to "Edit", edit_service_path(service) %>    
+ <% end %>
