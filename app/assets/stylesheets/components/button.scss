@@ -1,0 +1,46 @@
+/*.btn {
+    text-decoration: none;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-block;
+    text-align: center;
+    margin-top: 6rem;
+    background-image: background-image: linear-gradient(to left, var(--color-secondary), var(--color-primary));
+}
+*/
+
+.btn {
+    margin-top: 5rem;
+    height: 4.4rem;
+    font-weight: 700;
+    width: 20rem;
+    line-height: 4.4rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem var(--color-black);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+    }
+}
+}

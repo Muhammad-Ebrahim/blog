@@ -5,9 +5,12 @@
     <%= display_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
 
   <body>
+    <%= render  "layouts/nav" %>
     <% if admin_signed_in?%>
       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
     <% end %>

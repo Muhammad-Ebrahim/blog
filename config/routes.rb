@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :services
   get 'subscribers/index'
   root to: "pages#home"
+  resources :about
 end

@@ -1,0 +1,24 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    word-spacing: .4rem;
+}
+
+.home-title {
+    font-size: 3.4rem;
+    text-align: center;
+    margin-top: 16rem;
+}
+
+.home-subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-grey);
+}
+
+.organically {
+    text-decoration: underline var(--color-secondary);
+}
+
