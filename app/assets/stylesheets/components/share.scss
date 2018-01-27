@@ -1,0 +1,17 @@
+.share {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4{
+        font-size: 3rem;
+        margin-right: 3rem;
+        border-bottom: .5rem solid var(--color-secondary);
+    }
+    &__icon{
+        margin-right: 2rem;
+        height: 5rem;
+        width: 5rem;
+        cursor: pointer;
+    }
+}
