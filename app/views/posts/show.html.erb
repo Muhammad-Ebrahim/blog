@@ -1,10 +1,12 @@
 <div class="post-container">
-        <% breadcrumb :post, @post %>
+        
         <div class="post-header">
             <h1 class="post-header__title"><%= @post.title %> </h1>
+
             <div class="post-header__meme">
-                    <span class="post-header__date"><strong>Last Updated: </strong><%= @post.updated_at.strftime("%B %d %Y")%></span>
+                    <span class="post-header__date"><strong>Last Updated: </strong><%= @post.updated_at.strftime("%B %d %Y")%></span> <br>
             </div>
+            <a class="follow" href="https://twitter.com/ibrahimindie">@ibrahimindie</a>
         </div>
         <div class="post-content">
             <div class="post-content__paragraph">
