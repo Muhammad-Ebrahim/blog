@@ -7,7 +7,7 @@
         <h2 class="blog-title"><%= post.title %> </h2>
         <div class="blog-meta">
         <strong class="post-header__date"><%= post.created_at.strftime("%B %d %Y")%></strong> <br>
-        <span> <%= raw post.tag_list.map { |t| link_to t, tag_path(t), class: "post-header__tags"}.join(', ') %></span>
+        <span> <%= raw post.tag_list.map { |t| link_to t, tag_path(t), class: "post-header__tags"}.join(' , ') %></span>
         </div>
         <%= link_to  "Read More", post, class: "btn" %>
     </div>

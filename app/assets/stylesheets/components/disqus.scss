@@ -1,4 +1,8 @@
 .disqus {
+    border-radius: .8rem;
     background-color: var(--color-white);
     padding: 3rem;
+    a{
+        color: var(--color-black);
+    }
 }

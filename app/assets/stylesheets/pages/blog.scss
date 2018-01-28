@@ -10,6 +10,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 7rem auto;
+    width: 55%;
+    background-color: #31294a;
+    padding: 3rem;
+    border-radius:3px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
 }
 
 .input-cta {
@@ -17,19 +23,13 @@
     margin-bottom: -2rem;
 }
 
-.blog-posts {
-    margin: 7rem auto;
-    width: 55%;
-    background-color: #31294a;
-    padding: 3rem;
-    border-radius:3px;
-}
 
 .blog-title {
     text-decoration: none;
     color: var(--color-white);
     font-size: 2.3rem;
     margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .blog-meta {

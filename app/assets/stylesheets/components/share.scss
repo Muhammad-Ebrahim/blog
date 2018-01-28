@@ -1,8 +1,12 @@
 .share {
-    margin: 5rem 0;
+    margin: 5rem auto;
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: .2rem solid #403662;
+    padding: 2rem;
+
     h4{
         font-size: 3rem;
         margin-right: 3rem;
