@@ -2,7 +2,26 @@
 
 .post-container {
     margin: 0 auto;
-    width: 65%;
+    width: 70%;
+    background-color: var(--color-white);
+    margin-top: 10rem;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+    color: var(--color-text);
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-black);
+        
+    }
+
+    @media only screen and (max-width:  37.5em) {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width:  56.25em) {
+        width: 100%;
+
+    }
 }
 
 
@@ -23,6 +42,14 @@
         font-size: 4rem;
         margin: 7rem 1rem 2rem 2rem;
         text-align: center;
+
+        @media only screen and (max-width:  56.25em) {
+            font-size: 3rem;
+        }
+        
+        @media only screen and (max-width:  37.5em) {
+            font-size: 3.3rem;
+        }
     }
 
     
@@ -36,9 +63,6 @@
         transition: background-color 120ms;
         margin-right: 1rem;
 
-        &:hover {
-            background-color: var(--color-secondary);
-        }
     }
 
     &__date {
@@ -54,7 +78,6 @@
 .post-content {
     padding: 4rem;
     //background-color: var(--color-white);
-    color: var(--color-white);
     font-family: 'Source Sans Pro', sans-serif;
     margin-top: 4rem;
     display: flex;
@@ -66,24 +89,42 @@
     border-bottom: .2rem solid var(--color-grey);
     padding-bottom: 3rem;
 
+
+    @media only screen and (max-width:  37.5em) {
+        font-size: 1.8rem;
+        padding: 2rem;
+
+    }
+    
+
     img {
         display: block;
         margin-right: auto;
         margin-left: auto;
+
+        @media only screen and (max-width:  56.25em) {
+            width: 100%;
+        }
+
+        @media only screen and (max-width:  37.5em) {
+            width: 100%;
+        }
     }
+
 
     a {
         //font-size: 1.4rem;
         text-decoration: none;
-        color: #1e99e6; //var(--color-secondary);
+        color: #1e99e6;
+        border-bottom: .2rem solid #1e99e6;
         //position: relative;
         //-webkit-transition: background-color 120ms;
         //transition: background-color 120ms;
         //margin-right: 5rem;
 
         &:hover {
-            color: #1e99e6;
-            border-bottom: .2rem solid #1e99e6;
+            color: var(--color-black);
+            border-bottom: .2rem solid var(--color-black);
         }
     }
     &__paragraph {

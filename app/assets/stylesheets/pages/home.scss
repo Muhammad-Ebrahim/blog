@@ -4,5 +4,41 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+
+    @media  only screen and (max-width: 31.25em){
+        font-size: 1rem;
+        color: orangered;
+    }
+
+}
+
+.home-title {
+    font-size: 3.4rem;
+    text-align: center;
+    margin-top: 16rem;
+    @media  only screen and (max-width: 37.5em){
+
+        font-size: 2.1rem;
+        padding: 0 5rem;
+
+    }
+    @media  only screen and (max-width: 31.25em){
+        margin-top: 8rem;
+
+    }
+}
+
+.home-subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--color-grey);
+    @media  only screen and (max-width: 37.5em){
+        padding: 0 4rem;
+    }
+}
+
+.organically {
+    text-decoration: underline var(--color-secondary);
 }
 

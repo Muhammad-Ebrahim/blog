@@ -7,12 +7,28 @@ header {
     //z-index: 100;
     //box-shadow: 3rem 0 var(--color-black);
     //border-bottom: .2rem solid var(--color-black);
+    @media  only screen and (max-width: 37.5em){
+        flex-direction: column;
+
+    }
+
 }
 
 .logo {
     font-size: 2rem;
+    //font-weight: 1000;
     align-self: flex-start;
     margin: 2rem;
+    text-decoration: none;
+    color: var(--color-white);
+    @media  only screen and (max-width: 37.5em){
+        margin: 0 auto;
+        margin-top: 1.5rem;
+
+
+    }
+
+
 }
 
 .i {
@@ -24,12 +40,18 @@ header {
     align-items: center;
     position: relative;
     margin: 0 5rem;
+ 
 
     &__item {
         margin: 1.5rem;
         font-size: 2rem;
         list-style: none;
         position: relative;
+        @media  only screen and (max-width: 37.5em){
+            font-size: 1.5rem;
+    
+        }
+    
     }
 
     &__link {

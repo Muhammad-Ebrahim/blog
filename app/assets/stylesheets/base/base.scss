@@ -1,14 +1,16 @@
 :root {
-    --color-primary: #201B31;
-    --color-primary-dark: #0b0910;
+    --color-primary: hsl(209, 61%, 24%);
+    --color-primary-dark:hsl(209, 61%, 15%);
     --color-secondary: #1DBF11;
-    --color-white: #ffffff;
+    --color-white: #fff;
     --color-grey: #848482;
+    --color-text: #2f363b;
     --color-black: #000;
     --line: 1px solid var(--color-secondary);
  }
 
-
+ 
+ 
 
 *,
 *::after,
@@ -32,5 +34,7 @@ body {
     background-repeat: no-repeat;
     line-height: 1.6;
     font-weight: 400;
+
+    
 }
 
