@@ -1,5 +1,6 @@
 :root {
     --color-primary: hsl(209, 61%, 24%);
+    --color-nav: hsl(209, 61%, 30%);
     --color-primary-dark:hsl(209, 61%, 15%);
     --color-secondary: #1DBF11;
     --color-white: #fff;
@@ -23,9 +24,12 @@
 html {
     //THIS DEFINES WHAT 1REM IS
     font-size: 62.5%;
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     //background-color: var(--color-primary);
     //background-image: linear-gradient(to bottom, var(--color-primary), var(--color-primary-dark));

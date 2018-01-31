@@ -1,5 +1,6 @@
 .about-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -34,6 +35,22 @@
         //font-family: 'Source Sans Pro', sans-serif;
         //text-align: center;
         //margin-top: 13rem;
+
+        a {
+            //font-size: 1.4rem;
+            text-decoration: none;
+            color: var(--color-white);
+            border-bottom: .2rem solid #1e99e6;
+            //position: relative;
+            //-webkit-transition: background-color 120ms;
+            //transition: background-color 120ms;
+            //margin-right: 5rem;
+    
+            &:hover {
+                color: #1e99e6;
+                border-bottom: .2rem solid var(--color-white);
+            }
+        }
 
         @media only screen and (max-width:  37.5em){
             font-size: 1.9rem;

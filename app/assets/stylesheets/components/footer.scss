@@ -1,0 +1,20 @@
+.footer-container {
+    
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 100%;
+     background-color: hsl(209, 61%, 30%);
+     color: white;
+     height: 9rem;
+     font-size: 1.5rem;
+     
+
+     @media  only screen and (max-width: 37.5em) {
+       font-size: 1rem;
+     }
+  }
