@@ -16,3 +16,9 @@ module Blog
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+#config.assets.precompile += Ckeditor.assets
+    #config.assets.precompile += %w( ckeditor_assets/* *.png *.jpg *.jpeg *.gif img/* uploads/*)
+    #config.encoding = "utf-8"
+    #config.assets.paths << "#{Rails}/vendor/assets/*"
+    #config.autoload_paths += %w(#{config.root}/app/models/ckeditor)

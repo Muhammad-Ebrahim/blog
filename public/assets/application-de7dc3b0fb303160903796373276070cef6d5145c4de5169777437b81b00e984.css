@@ -1,0 +1,647 @@
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+header {
+  background-color: var(--color-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+  header {
+    flex-direction: column;
+  }
+}
+
+/* line 19, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: flex-start;
+  margin: 2rem;
+  text-decoration: none;
+  color: var(--color-white);
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 19, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+  .logo {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+}
+
+/* line 37, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.i {
+  color: var(--color-secondary);
+}
+
+/* line 41, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.menu-list {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 5rem;
+}
+/* line 48, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.menu-list__item {
+  margin: 1.5rem;
+  font-size: 2rem;
+  list-style: none;
+  position: relative;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 48, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+  .menu-list__item {
+    font-size: 1.5rem;
+  }
+}
+/* line 60, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.menu-list__link {
+  text-decoration: none;
+  color: var(--color-white);
+  z-index: 10;
+}
+/* line 66, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.menu-list__link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .2rem;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+  background-color: .1s;
+}
+/* line 82, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/nav.scss */
+.menu-list__link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/*.btn {
+    text-decoration: none;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-block;
+    text-align: center;
+    margin-top: 6rem;
+    background-image: background-image: linear-gradient(to left, var(--color-secondary), var(--color-primary));
+}
+*/
+/* line 17, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/button.scss */
+.btn {
+  margin-top: 5rem;
+  height: 4.4rem;
+  font-weight: 700;
+  width: 20rem;
+  line-height: 4.4rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  overflow: hidden;
+  cursor: pointer;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 17, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/button.scss */
+  .btn {
+    height: 4rem;
+    width: 15rem;
+    font-size: 1.5rem;
+  }
+}
+/* line 43, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/button.scss */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem var(--color-black);
+}
+/* line 47, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/button.scss */
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/disqus.scss */
+.disqus {
+  border-radius: .8rem;
+  background-color: var(--color-white);
+  padding: 3rem;
+}
+/* line 5, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/disqus.scss */
+.disqus a {
+  color: var(--color-black);
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+.share {
+  margin: 5rem auto;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0.2rem solid var(--color-primary);
+  padding: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+  .share {
+    width: 90%;
+    outline: none;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+  .share {
+    width: 90%;
+    outline: none;
+  }
+}
+/* line 20, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+.share h4 {
+  font-size: 3rem;
+  margin-right: 3rem;
+  border-bottom: 0.5rem solid var(--color-secondary);
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 20, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+  .share h4 {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 20, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+  .share h4 {
+    font-size: 2rem;
+  }
+}
+/* line 33, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+.share__icon {
+  margin-right: 2rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 33, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+  .share__icon {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 33, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/share.scss */
+  .share__icon {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+/* line 2, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/follow.scss */
+.follow {
+  font-size: 2rem;
+  margin-top: 3rem;
+  text-decoration: none;
+  background-color: #1e99e6;
+  border-radius: .3rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 .6rem;
+}
+/* line 12, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/follow.scss */
+.follow:hover {
+  background-color: #50bfff;
+}
+
+/* line 6, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/footer.scss */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #1e4e7b;
+  color: white;
+  height: 9rem;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 6, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/components/footer.scss */
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/base/base.scss */
+:root {
+  --color-primary: hsl(209, 61%, 24%);
+  --color-nav: hsl(209, 61%, 30%);
+  --color-primary-dark:hsl(209, 61%, 15%);
+  --color-secondary: #1DBF11;
+  --color-white: #fff;
+  --color-grey: #848482;
+  --color-text: #2f363b;
+  --color-black: #000;
+  --line: 1px solid var(--color-secondary);
+}
+
+/* line 16, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/base/base.scss */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 24, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/base/base.scss */
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+/* line 30, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/base/base.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/base/typography.scss */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--color-white);
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+@media only screen and (max-width: 31.25em) {
+  /* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+  .container {
+    font-size: 1rem;
+  }
+}
+
+/* line 15, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+.home-title {
+  font-size: 3.4rem;
+  text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 15, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+  .home-title {
+    font-size: 2.1rem;
+    padding: 0 5rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  /* line 15, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+  .home-title {
+    margin-top: 8rem;
+  }
+}
+
+/* line 31, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+.home-subtitle {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--color-grey);
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 31, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+  .home-subtitle {
+    padding: 0 4rem;
+  }
+}
+
+/* line 41, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/home.scss */
+.organically {
+  text-decoration: underline var(--color-secondary);
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/services.scss */
+.service-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  outline: 0.2rem solid var(--color-primary-dark);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  margin: 10rem auto;
+  width: 70%;
+  padding: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/services.scss */
+  .service-container {
+    width: 100%;
+    outline: none;
+  }
+}
+/* line 20, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/services.scss */
+.service-container__header {
+  text-align: center;
+  font-size: 3rem;
+  padding: 0 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 20, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/services.scss */
+  .service-container__header {
+    font-size: 2.1rem;
+    padding: 0;
+    margin-top: 1.7rem;
+  }
+}
+/* line 33, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/services.scss */
+.service-container__arm {
+  height: 5rem;
+  width: 5rem;
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.about-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  outline: 0.2rem solid var(--color-primary-dark);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  margin: 6rem auto;
+  width: 70%;
+  padding: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+  .about-container {
+    width: 100%;
+    outline: none;
+  }
+}
+/* line 21, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.about-container .about-paragraph {
+  color: var(--color-white);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+}
+/* line 39, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.about-container .about-paragraph a {
+  text-decoration: none;
+  color: var(--color-white);
+  border-bottom: .2rem solid #1e99e6;
+}
+/* line 49, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.about-container .about-paragraph a:hover {
+  color: #1e99e6;
+  border-bottom: 0.2rem solid var(--color-white);
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 21, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+  .about-container .about-paragraph {
+    font-size: 1.9rem;
+    padding: 0;
+    margin-top: 1.7rem;
+  }
+}
+/* line 63, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.about-container .about-header {
+  font-size: 3rem;
+}
+/* line 69, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.about-container .hand {
+  margin-left: 1rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+/* line 77, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/about.scss */
+.hi {
+  display: flex;
+}
+
+/* line 1, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.blog-optin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 8, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 7rem auto;
+  width: 55%;
+  background-color: var(--color-primary-dark);
+  padding: 3rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 8, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+  .blog-posts {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 8, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+  .blog-posts {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+}
+
+/* line 31, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.input-cta {
+  font-size: 3.5rem;
+  margin-bottom: -2rem;
+}
+
+/* line 37, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.blog-title {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* line 45, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.blog-meta {
+  margin-bottom: -2rem;
+}
+
+/* line 49, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.form-input {
+  font-size: 16px;
+  font-family: inherit;
+  width: 40%;
+  padding: 13px 20px;
+  border-radius: 3px;
+  border-style: solid;
+  line-height: 1;
+  margin-bottom: 15px;
+  background-color: var(--color-white);
+  margin: 0 3rem;
+}
+/* line 61, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/blog.scss */
+.form-input:focus, .form-input:active {
+  box-shadow: 0 0 2px 3px #1dbf11;
+  border: none;
+}
+
+/* line 3, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-container {
+  margin: 0 auto;
+  width: 70%;
+  background-color: var(--color-white);
+  margin-top: 10rem;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  color: var(--color-text);
+}
+/* line 11, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-container h1, .post-container h2, .post-container h3, .post-container h4, .post-container h5, .post-container h6 {
+  color: var(--color-black);
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 3, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-container {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 3, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-container {
+    width: 100%;
+  }
+}
+
+/* line 28, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-header {
+  margin-top: -5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 0.2rem solid var(--color-grey);
+  padding-bottom: 4rem;
+}
+/* line 41, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-header__title {
+  font-size: 4rem;
+  margin: 7rem 1rem 2rem 2rem;
+  text-align: center;
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 41, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-header__title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 41, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-header__title {
+    font-size: 3.3rem;
+  }
+}
+/* line 56, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-header__tags {
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-bottom: 0.2rem solid var(--color-secondary);
+  color: var(--color-white);
+  position: relative;
+  -webkit-transition: background-color 120ms;
+  transition: background-color 120ms;
+  margin-right: 1rem;
+}
+/* line 68, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-header__date {
+  font-size: 1.4rem;
+}
+
+/* line 78, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-content {
+  padding: 4rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  flex-direction: column;
+  font-size: 2rem;
+  border-bottom: 0.2rem solid var(--color-grey);
+  padding-bottom: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 78, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-content {
+    font-size: 1.8rem;
+    padding: 2rem;
+  }
+}
+/* line 100, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-content img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (max-width: 56.25em) {
+  /* line 100, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-content img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  /* line 100, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+  .post-content img {
+    width: 100%;
+  }
+}
+/* line 115, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-content a {
+  text-decoration: none;
+  color: #1e99e6;
+  border-bottom: .2rem solid #1e99e6;
+}
+/* line 125, /home/ibrahim/Ruby On Rails/blog/app/assets/stylesheets/pages/post.scss */
+.post-content a:hover {
+  color: var(--color-black);
+  border-bottom: 0.2rem solid var(--color-black);
+}
