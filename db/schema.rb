@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180126150944) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,8 +56,14 @@ ActiveRecord::Schema.define(version: 20180126150944) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'true' for column 'unique'
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
+  end
 
   create_table "services", force: :cascade do |t|
     t.string "title"
@@ -65,7 +74,7 @@ ActiveRecord::Schema.define(version: 20180126150944) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "taggings", force: :cascade do |t|
+  create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -84,7 +93,7 @@ ActiveRecord::Schema.define(version: 20180126150944) do
     t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
 
-  create_table "tags", force: :cascade do |t|
+  create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
