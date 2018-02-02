@@ -17,6 +17,8 @@ module Blog
   end
 end
 
+config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
+
 #config.assets.precompile += Ckeditor.assets
     #config.assets.precompile += %w( ckeditor_assets/* *.png *.jpg *.jpeg *.gif img/* uploads/*)
     #config.encoding = "utf-8"
