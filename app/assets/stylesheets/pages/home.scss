@@ -29,12 +29,14 @@
 }
 
 .home-subtitle {
-    font-size: 1.8rem;
+    font-weight: 400;
+    font-size: 2.1rem;
     text-align: center;
-    margin-top: 2rem;
-    color: var(--color-grey);
+    margin: 2rem 0;
+    color: var(--color-white);
     @media  only screen and (max-width: 37.5em){
         padding: 0 4rem;
+        font-size: 1.8rem;
     }
 }
 

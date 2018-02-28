@@ -12,6 +12,8 @@ class ServicesController < ApplicationController
     end
 
     def show
+        set_meta_tags title: @service.title, 
+                    description: @service.description
     end
 
     def create

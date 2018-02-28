@@ -11,7 +11,7 @@ header {
     //background-color: var(--color-primary-dark);
     @media  only screen and (max-width: 37.5em){
         flex-direction: column;
-
+        align-items: flex-start;
     }
 
 }
@@ -25,10 +25,10 @@ header {
     text-decoration: none;
     color: var(--color-white);
     @media  only screen and (max-width: 37.5em){
-        margin: 0 auto;
         margin-top: 1.5rem;
-
-
+        font-size: 1.5rem;
+        font-weight: 400;
+        align-self: center;
     }
 
 

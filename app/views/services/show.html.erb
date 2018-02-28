@@ -1,8 +1,9 @@
-<body>
-    <%= @service.title %>
-    <br>
-    <%= sanitize @service.content%>
-    <% if admin_signed_in?%>
-        <%= link_to  "Edit", edit_post_path(@post) %>
-    <% end %>
-   </body>
+    <div class="service-container">
+        <%= sanitize @service.content%>
+        <a class="btn" href="https://muhammadibrahim5.typeform.com/to/BPVHGF">Let's Talk</a>
+        
+        <% if admin_signed_in?%>
+            <%= link_to  "Edit", edit_service_path(@service) %>
+        <% end %>
+    </div>
+    
