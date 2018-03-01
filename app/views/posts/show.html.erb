@@ -16,9 +16,9 @@
 
         <div class="share">
             <h4>Share the post on: </h4>
-            <a onclick="javascript:window.open('https://twitter.com/share?text=<%= @post.title %> by @ibrahimindie - &amp;url=<%= @post%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><img class="share__icon" src="/twitter.svg"></a>
+            <a onclick="javascript:window.open('https://twitter.com/share?text= <%= @post.title %>&amp;url=<%= @post %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><img class="share__icon" src="/twitter.svg"></a>
 
-            <a onclick="javascript:window.open('https://facebook.com/share?text=<%= @post.title %> by Muhammad Ibrahim - &amp;url=<%= @post%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><img class="share__icon" src="/facebook.svg"></a>
+            <a onclick="javascript:window.open('https://facebook.com/share?text= <%= @post.title %> by Muhammad Ibrahim - &amp;url=<%= @post%>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><img class="share__icon" src="/facebook.svg"></a>
         </div>
     
         <div class="disqus">
