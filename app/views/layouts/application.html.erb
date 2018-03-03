@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= csrf_meta_tags %>
-    <%= display_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  </head>
 
-  <body>
-    <%= render  "layouts/nav" %>
+<head>
+
+  <!-- Google Tag Manager -->
+  <% if Rails.env.production? %>
+    <script>
+      document.addEventListener('turbolinks:load', function (event) {
+        var url = event.data.url;
+        dataLayer.push({
+          'event': 'pageView',
+          'virtualUrl': url
+        });
+      });
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MSKDHXC');
+    </script>
+    <% end %>
+      <!-- End Google Tag Manager -->
+
+      <%= csrf_meta_tags %>
+      <%= display_meta_tags %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSKDHXC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <%= render  "layouts/nav" %>
     <% if admin_signed_in?%>
       <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %>
-    <% end %>
-    <%= breadcrumbs separator: " &rsaquo; " %>
+        <% end %>
+          <%= breadcrumbs separator: " &rsaquo; " %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+            <p class="notice">
+              <%= notice %>
+            </p>
+            <p class="alert">
+              <%= alert %>
+            </p>
 
-    <%= yield %>
-  </body>
+            <%= yield %>
+</body>
 
-  <%= render  "layouts/footer" %>
+<%= render  "layouts/footer" %>
+
 </html>
